@@ -16,7 +16,7 @@ let player2 = 0;
 for (let i = 0; i < boxes.length; i++) {
   // Quando alguém clica na caixa
 
-  boxes[i].addEventListener("click"), function () {
+  boxes[i].addEventListener("click", function () {
     let el;
     if (player1 == player2) {
       // x
@@ -29,5 +29,4 @@ for (let i = 0; i < boxes.length; i++) {
     let cloneEl = el.cloneNode(true);
     this.appendChild(cloneEl);
   });
-
 }
