@@ -17,16 +17,31 @@ for (let i = 0; i < boxes.length; i++) {
   // Quando alguém clica na caixa
 
   boxes[i].addEventListener("click", function () {
-    let el;
-    if (player1 == player2) {
-      // x
-      el = x;
-    } else {
-      // o
-      el = o;
-    }
+    let el = checkEl(player1, player2);
 
-    let cloneEl = el.cloneNode(true);
-    this.appendChild(cloneEl);
+    // Verifica se já tem x ou o
+    if (this.childNodes.length == 0) {
+      let cloneEl = el.cloneNode(true);
+      this.appendChild(cloneEl);
+
+      // Computar jogada
+      if (player1 == player2) {
+        player1++;
+      } else {
+        player2++;
+      }
+    }
   });
+}
+
+// Verifica quem será o próximo a jogar
+function checkEl(player1, player2) {
+  if (player1 == player2) {
+    // x
+    el = x;
+  } else {
+    // o
+    el = o;
+  }
+  return el;
 }
