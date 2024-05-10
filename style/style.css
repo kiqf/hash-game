@@ -15,6 +15,7 @@ h1 {
   border: none;
   padding: 10px 15px;
   margin: 0 10px;
+  margin-bottom: 20px;
 }
 
 /* Jogo */
@@ -72,6 +73,10 @@ h1 {
   margin-top: 17px;
 }
 
+.score-box {
+  margin: 0 20px;
+}
+
 /* Classe de Esconder */
 
 
@@ -88,4 +93,35 @@ h1 {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+}
+
+#x-scoreboard {
+  color: red;
+  margin-right: 3px;
+}
+
+#o-scoreboard {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid green;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+/* Mensagem de Vitória */
+
+#message p {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 150px;
+  width: 500px;
+  font-size: 50px;
+  background-color: #000;
+  color: #fff;
+  padding: 0px;
+  display: none;
 }
